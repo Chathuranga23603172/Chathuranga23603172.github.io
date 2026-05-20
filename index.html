@@ -142,20 +142,76 @@ footer{position:relative;z-index:2;padding:2rem 3rem;border-top:1px solid var(--
   .project-card.wide{grid-column:1/-1}
 }
 @media(max-width:700px){
-  nav{padding:1rem 1.5rem}
+  nav{padding:1rem 1.25rem}
+  .nav-logo{font-size:1rem}
   .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(8,12,16,0.97);flex-direction:column;gap:0;border-bottom:1px solid var(--border)}
   .nav-links.open{display:flex}
-  .nav-links li a{display:block;padding:1rem 1.5rem;border-bottom:1px solid var(--border)}
+  .nav-links li a{display:block;padding:1rem 1.25rem;border-bottom:1px solid var(--border)}
   .nav-hamburger{display:flex;cursor:pointer}
-  .hero{padding:0 1.5rem;padding-top:5rem;min-height:100svh}
-  section{padding:4rem 1.5rem}
+
+  .hero{padding:5rem 1.25rem 3rem;min-height:100svh;align-items:flex-start;padding-top:6rem}
+  .hero-content{width:100%;max-width:100%}
+  .hero-tag{font-size:0.62rem;padding:5px 10px;margin-bottom:1.25rem}
+
+  h1.hero-name{
+    font-size:clamp(2.6rem,11vw,3.8rem);
+    line-height:1.0;
+    word-break:break-word;
+    overflow-wrap:break-word;
+    hyphens:auto;
+    padding-left:0;
+    margin-bottom:0.75rem;
+    white-space:normal;
+  }
+  .hero-title{
+    font-size:0.62rem;
+    letter-spacing:0.12em;
+    line-height:1.7;
+    white-space:normal;
+    margin-bottom:1rem;
+  }
+  .hero-bio{
+    font-size:0.8rem;
+    line-height:1.75;
+    margin-bottom:1.75rem;
+    overflow-wrap:break-word;
+    word-break:break-word;
+  }
+  .hero-cta{flex-direction:column;gap:0.75rem}
+  .btn-primary,.btn-secondary{width:100%;justify-content:center;padding:13px 20px;font-size:0.78rem}
+
+  section{padding:3rem 1.25rem}
+  .section-title{font-size:1.6rem}
+
   .projects-grid,.contact-grid,.stats-bar{grid-template-columns:1fr}
   .skills-layout{grid-template-columns:1fr;gap:2rem}
   .project-card.wide{grid-column:auto}
-  .stat{border-right:none;border-bottom:1px solid var(--border)}
+  .project-name{font-size:1.05rem}
+  .project-desc{font-size:0.75rem}
+
+  .stat{border-right:none;border-bottom:1px solid var(--border);padding:1.5rem 1.25rem}
   .stat:last-child{border-bottom:none}
-  h1.hero-name{font-size:2.5rem}
-  footer{padding:1.5rem}
+  .stat-num{font-size:1.8rem}
+
+  .bio-card{padding:1.5rem}
+  .bio-card p{font-size:0.78rem}
+  .bio-highlights{grid-template-columns:1fr 1fr;gap:0.75rem}
+  .bio-highlight{padding:0.75rem}
+  .bio-highlight-val{font-size:0.75rem}
+
+  .contact-item{padding:1.25rem}
+  .contact-val{font-size:0.75rem;word-break:break-all}
+
+  .skill-name{font-size:0.72rem;white-space:normal;word-break:break-word}
+
+  footer{padding:1.25rem;flex-direction:column;text-align:center;gap:0.5rem}
+}
+
+@media(max-width:400px){
+  h1.hero-name{font-size:2.3rem}
+  .hero{padding:5.5rem 1rem 2.5rem}
+  section{padding:2.5rem 1rem}
+  .bio-highlights{grid-template-columns:1fr}
 }
 </style>
 </head>
